@@ -96,3 +96,65 @@ function pattern7(n) {
 }
 
 pattern7(5);
+
+
+//pattern 08
+
+function pattern8(n){
+    for(let i=0; i<n; i++){
+        //for space
+
+        for(let j =0; j<i; j++){
+            process.stdout.write(" ");
+        }
+
+        //stars
+        for(let j=0; j< 2*n -(2*i+1); j++){
+            process.stdout.write("*");
+        }
+
+        for(let j=0; j<i; j++){
+            process.stdout.write(" ");
+        }
+        console.log();
+    }
+}
+pattern8(5);
+
+//pattern 09
+
+function pattern9(n){
+    for(let i=0; i<n; i++){
+        //space
+        for (let j = 0; j < n - i - 1; j++) {
+            process.stdout.write(" ");
+        }
+        // star
+        for (let j = 0; j <= 2 * i; j++) {
+            process.stdout.write("*");
+        }
+        // space
+        for (let j = 0; j < n - i - 1; j++) {
+            process.stdout.write(" ");
+        }
+        console.log();
+    }
+    for(let i=0; i<n; i++){
+        //for space
+
+        for(let j =0; j<i; j++){
+            process.stdout.write(" ");
+        }
+
+        //stars
+        for(let j=0; j< 2*n -(2*i+1); j++){
+            process.stdout.write("*");
+        }
+
+        for(let j=0; j<i; j++){
+            process.stdout.write(" ");
+        }
+        console.log();
+    }
+}
+pattern9(5);
