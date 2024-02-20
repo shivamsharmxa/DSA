@@ -74,3 +74,25 @@ function pattern6(n){
 }
 
 pattern6(5);
+
+//pattern 07 
+
+function pattern7(n) {
+    for (let i = 0; i < n; i++) {
+        // space
+        for (let j = 0; j < n - i - 1; j++) {
+            process.stdout.write(" ");
+        }
+        // star
+        for (let j = 0; j <= 2 * i; j++) {
+            process.stdout.write("*");
+        }
+        // space
+        for (let j = 0; j < n - i - 1; j++) {
+            process.stdout.write(" ");
+        }
+        console.log(); // Move to the next line after each row
+    }
+}
+
+pattern7(5);
