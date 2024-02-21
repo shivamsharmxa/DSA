@@ -186,5 +186,51 @@ pattern8(5);
 
 pattern10(6);
 
+//pattern 11
+function pattern11(n) {
+    let start = 1;
+    for (let i = 0; i < n; i++) {
+        if (i % 2 == 0) start = 1;
+        else start = 0;
+        for (let j = 0; j <= i; j++) {
+            process.stdout.write(start + " ");
+            start = 1 - start;
+        }
+        console.log(); 
+    }
+}
+
+pattern11(6);
+
+
+//pattern 12
+
+function pattern12(n) {
+    let spaces = 2 * (n - 1);
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+            process.stdout.write(j.toString());
+        }
+
+        // spaces
+        for (let j = 1; j <= spaces; j++) {
+            process.stdout.write(" ");
+        }
+
+        for (let j = i; j >= 1; j--) {  
+            process.stdout.write(j.toString());
+        }
+
+        console.log();
+        spaces -= 2;
+    }
+}
+
+
+
+
+
+pattern12(5);
+
  
 
