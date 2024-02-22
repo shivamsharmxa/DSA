@@ -232,5 +232,34 @@ function pattern12(n) {
 
 pattern12(5);
 
- 
+
+//pattern 13
+
+function pattern13(n) {
+    let num = 1;
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+            process.stdout.write(num + " ");
+            num = num + 1;
+        }
+        console.log();
+    }
+}
+
+pattern13(5);
+
+
+//pattern 14
+
+function pattern14(n){
+    let a = 65;
+    for(let i=0; i<n; i++){
+        for(let ch = a; ch<= a+i; ch++){
+         process.stdout.write(String.fromCharCode(ch));
+        }
+        console.log();
+    }
+}
+pattern14(5);
+
 
