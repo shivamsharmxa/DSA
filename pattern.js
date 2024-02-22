@@ -262,4 +262,33 @@ function pattern14(n){
 }
 pattern14(5);
 
+//pattern 15
+
+function pattern15(n){
+    let a=65;
+    for(let i=0; i<n; i++){
+        for(let ch=a;ch<=a+(n-i-1);ch++){
+            process.stdout.write(String.fromCharCode(ch));
+        }
+        console.log();
+    }
+}
+pattern15(5);
+
+
+//pattern 16
+
+function pattern16(n) {
+    let a = 65;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j <= i; j++) {
+            let ch = a + i;
+            process.stdout.write(String.fromCharCode(ch));
+        }
+        console.log();
+    }
+}
+
+pattern16(5);
+
 
