@@ -283,12 +283,79 @@ function pattern16(n) {
     for (let i = 0; i < n; i++) {
         for (let j = 0; j <= i; j++) {
             let ch = a + i;
-            process.stdout.write(String.fromCharCode(ch));
+            process.stdout.write(String.fromCharCode(ch + " "));
         }
         console.log();
     }
 }
 
-pattern16(5);
+// pattern16(5);
+
+//pattern 17
+function pattern17(n) {
+    let a = 65; 
+    for (let i = 0; i < n; i++) {
+        for(let ch=(a+n-1)-i; ch<=(a+n-1); ch++){
+            process.stdout.write(String.fromCharCode(ch + " "));
+        }
+        
+        console.log();
+    }
+}
+
+pattern17(5);
+
+
+//pattern 18
+function pattern18(n) {
+    // upper half
+    let iniS = 0;
+    for (let i = 0; i < n; i++) {
+        // for printing the stars in the row.
+        for (let j = 1; j <= n - i; j++) {
+            process.stdout.write("*");
+        }
+
+        // for printing the spaces in the row.
+        for (let j = 1; j <= iniS; j++) {
+            process.stdout.write(" ");
+        }
+
+        // for printing the stars in the row.
+        for (let j = 1; j <= n - i; j++) {
+            process.stdout.write("*");
+        }
+
+        // The spaces increase by 2 every time we hit a new row.
+        iniS += 2;
+        console.log();
+    }
+
+    // lower half
+    iniS = 2 * n - 2;
+    for (let i = 1; i <= n; i++) {
+        // for printing the stars in the row.
+        for (let j = 1; j <= i; j++) {
+            process.stdout.write("*");
+        }
+
+        // for printing the spaces in the row.
+        for (let j = 1; j <= iniS; j++) {
+            process.stdout.write(" ");
+        }
+
+        // for printing the stars in the row.
+        for (let j = 1; j <= i; j++) {
+            process.stdout.write("*");
+        }
+
+        // The spaces decrease by 2 every time we hit a new row.
+        iniS -= 2;
+        console.log();
+    }
+}
+
+pattern18(5);
+
 
 
