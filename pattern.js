@@ -357,5 +357,50 @@ function pattern18(n) {
 
 pattern18(5);
 
+///pattern 19
+function pattern19(n){
+   let initialSpace = 2*n-2;
+   for(let i=1; i<=n; i++){
+    //for the upper part
+
+    //for the stars
+    for(let j =1; j<=i; j++){
+        process.stdout.write("*");
+    }
+    // for the space
+    for(let j=1; j<=initialSpace; j++){
+        process.stdout.write(" ");
+    }
+    //again stars
+    for(let j =1; j<=i; j++){
+        process.stdout.write("*");
+    }
+    initialSpace -=2;
+    console.log();
+   }
+   //second half
+   initialSpace=2;
+   for(let i=1; i<=n; i++){
+    //for the stars
+    for(let j=0;j<n-i;j++){
+        process.stdout.write("*")
+    }
+    //space
+    for(let j=1; j<=initialSpace; j++)
+    {
+        process.stdout.write(" ");
+    }  
+    for(let j=0;j<n-i;j++){
+        process.stdout.write("*")
+    }
+initialSpace +=2;
+console.log();
+ }
+
+    
+}
+
+pattern19(5);
+
 
 
