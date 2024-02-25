@@ -87,6 +87,27 @@ function Alldivisor(N) {
 
 Alldivisor(10);
 
+//primeNumber
+
+function isPrimeNumber(N) {
+    if (N <= 1) {
+        return false;  // 1 is not a prime number
+    }
+
+    for (let i = 2; i <= Math.sqrt(N); i++) {
+        if (N % i === 0) {
+            return false;  // N has a divisor other than 1 and itself
+        }
+    }
+
+    return true;  // N is a prime number
+}
+
+
+let number = 36;
+console.log(isPrimeNumber(number)
+    ? `${number} is a prime number.`
+    : `${number} is not a prime number.`);
 
 
 
