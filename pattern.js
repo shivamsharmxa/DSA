@@ -403,4 +403,3 @@ console.log();
 pattern19(5);
 
 
-

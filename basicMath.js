@@ -8,7 +8,7 @@ function countdigit(n){
     process.stdout.write(count.toString());
 }
 
-// countdigit(325);
+ countdigit(325);
 
 //reverse a number
 function Reverse(N){
@@ -23,7 +23,7 @@ function Reverse(N){
     console.log(reverseNum);
 }
 
-// Reverse(1234);
+ Reverse(1234);
 
 
 //palindrome Number
@@ -47,4 +47,31 @@ function palindrome(N){
     }
 }
 
-palindrome(414);
+ palindrome(414);
+
+//ArmstrongNumber 
+function isArmstrongNumber(number) {
+    let numDigits = String(number).length;
+    let tempNumber = number;
+    let sum = 0;
+
+    while (tempNumber > 0) {
+        let digit = tempNumber % 10;
+        sum += Math.pow(digit, numDigits);
+        tempNumber = Math.floor(tempNumber / 10);
+    }
+
+    return sum === number;
+}
+
+
+let exampleNumber = 35;
+if (isArmstrongNumber(exampleNumber)) {
+    console.log(`${exampleNumber} is an Armstrong number.`);
+} else {
+    console.log(`${exampleNumber} is not an Armstrong number.`);
+}
+
+
+
+
