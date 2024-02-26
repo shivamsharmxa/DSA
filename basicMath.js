@@ -124,5 +124,8 @@ console.log(isPrimeNumber(number)
    console.log(findGCD(4,10));  
 
 
+   
+
+
 
 
