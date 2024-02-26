@@ -12,3 +12,23 @@ function main(){
 }
 
 main();
+
+//printing name n times
+
+function func(i, n) {
+    // Base Condition.
+    if (i > n) return;
+    console.log("Shivam");
+ 
+   
+    func(i + 1, n);
+}
+
+function name() {
+    func(1, 5);
+}
+
+
+name();
+
+ 
