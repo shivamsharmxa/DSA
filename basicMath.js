@@ -110,5 +110,19 @@ console.log(isPrimeNumber(number)
     : `${number} is not a prime number.`);
 
 
+  //findGCD
+  function findGCD(num1, num2) {
+    let ans;
+
+    for (let i = 1; i <= Math.min(num1, num2); i++) {
+        if (num1 % i === 0 && num2 % i === 0) {
+            ans = i;
+        }
+    }
+ return ans;
+}
+   console.log(findGCD(4,10));  
+
+
 
 
