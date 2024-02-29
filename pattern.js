@@ -203,6 +203,8 @@ function pattern11(n) {
 pattern11(6);
 
 
+
+
 //pattern 12
 
 function pattern12(n) {
@@ -391,7 +393,7 @@ function pattern19(n){
         process.stdout.write(" ");
     }  
     for(let j=0;j<n-i;j++){
-        process.stdout.write("*")
+        process.stdout.write("*");
     }
 initialSpace +=2;
 console.log();

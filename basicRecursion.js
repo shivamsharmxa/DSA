@@ -105,3 +105,20 @@ function main(){
 }
 
 main();
+
+function reversedArray(arr,start,end){
+    if(start<end){
+        [arr[start],arr[end] = arr[end],arr[start]];
+        reversedArray(arr,start + 1,end - 1);
+
+    }
+}
+
+function main(){
+    const n =5;
+    const arr=[10,9,8,7,6];
+    reversedArray(arr,0,n-1);
+    printArray(arr);
+}
+
+main();
