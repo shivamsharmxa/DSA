@@ -106,19 +106,38 @@ function main(){
 
 main();
 
-function reversedArray(arr,start,end){
-    if(start<end){
-        [arr[start],arr[end] = arr[end],arr[start]];
-        reversedArray(arr,start + 1,end - 1);
+//check if the given string is palindrome or not
 
-    }
+function palindrome(i, s) {
+    if (i >= s.length / 2) return true;
+
+    if (s[i] !== s[s.length - i - 1]) return false;
+
+    return palindrome(i + 1, s);
 }
 
-function main(){
-    const n =5;
-    const arr=[10,9,8,7,6];
-    reversedArray(arr,0,n-1);
-    printArray(arr);
+function checkPalindrome(i, s) {
+    return palindrome(i, s);
 }
 
-main();
+// Example string.
+let naman = "naman";
+console.log(checkPalindrome(0, naman));
+
+
+//fibonacci Number
+function fibonacci(N){
+    //base condition 
+    if(N<=1) return N;
+
+    let last = fibonacci(N-1);
+    let prevLast = fibonacci(N-2);
+
+    return last + prevLast;
+}
+
+function printFibonacci(N){
+    return fibonacci(N)
+
+}
+console.log(printFibonacci(4));
