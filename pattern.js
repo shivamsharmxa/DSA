@@ -291,7 +291,7 @@ function pattern16(n) {
     }
 }
 
-// pattern16(5);
+ pattern16(5);
 
 //pattern 17
 function pattern17(n) {
@@ -373,13 +373,15 @@ function pattern19(n){
     for(let j=1; j<=initialSpace; j++){
         process.stdout.write(" ");
     }
-    //again stars
+   //for the stars
     for(let j =1; j<=i; j++){
         process.stdout.write("*");
     }
     initialSpace -=2;
     console.log();
    }
+
+
    //second half
    initialSpace=2;
    for(let i=1; i<=n; i++){
@@ -397,9 +399,7 @@ function pattern19(n){
     }
 initialSpace +=2;
 console.log();
- }
-
-    
+ }   
 }
 
 pattern19(5);
