@@ -54,5 +54,25 @@ function frequency(arr) {
 
 // Example array
 
+//Map()
+
+let arrOne = [12,13,14,15,16];
+const multiFive = (num)=>{
+    return num * 2; 
+}
+let arrTwo = arrOne.map(multiFive);
+console.log("Changed array is : ",arrTwo);
+console.log("Previous array is : ",arrOne);
+
+//Filter()
+
+let array1 = [15,34,56,21,18];
+const divbythree = (num)=>{
+    return num%3 == 0
+}
+
+let array2 = array1.filter(divbythree);
+console.log("number divided by 3 is : ",array2);
+
 
 
