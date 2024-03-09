@@ -74,5 +74,28 @@ const divbythree = (num)=>{
 let array2 = array1.filter(divbythree);
 console.log("number divided by 3 is : ",array2);
 
+// promise chain
+
+ getData(1).then((res)=>{console.log(res);
+    getData(2).then((res)=>{
+        console.log(res)
+    })
+})
+
+//callback hell 
+getData(1,()=>{
+    console.log("data2 is......")
+    getData(2,()=>{
+        console.log("data3 is......")
+        getData(3,()=>{
+            console.log("data4 is.....")
+            getData(4)
+        })
+    })
+});
+
+
+Map()
+
 
 
