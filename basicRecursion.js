@@ -155,5 +155,18 @@ function print(N){
 function main(){
     print(5);
 }
-main();
+
+
+//another way to do 
+function print(N){
+    if(N==0) return;
+    console.log(N);
+    print(N-1);
+    return;
+}
+function main1(){
+    print(6);
+}
+
+main1();
 
