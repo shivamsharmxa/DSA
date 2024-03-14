@@ -157,7 +157,7 @@ function main(){
 }
 
 
-//another way to do 
+// Printing N to I
 function print(N){
     if(N==0) return;
     console.log(N);
@@ -168,5 +168,19 @@ function main1(){
     print(6);
 }
 
-main1();
+// main1();
+
+//Sum of First N numbers
+function sum(N){
+    //base condition
+    if(N==0) return 0;
+    let smalloutput = sum(N-1);
+    let output = N + smalloutput;
+    return output;
+}
+
+function main2(){
+    console.log(sum(5));
+}
+main2();
 
