@@ -184,3 +184,44 @@ function main2(){
 }
 main2();
 
+//factorial of N Number
+function fact(N){
+    //base condition
+    if(N==0) return 1;
+    factorial = N* fact(N-1);
+    return factorial;
+}
+
+function main3(){
+    console.log(fact(5));
+}
+main3();
+
+
+//Reverse an array
+function reverseArray(arr,start=0,end=arr.length-1){
+    //base condition
+    if(start>=end){
+        return arr;
+    }else{
+        [arr[start],arr[end]] = [arr[end],arr[start]]
+        return reverseArray(arr, start + 1, end - 1);
+    }
+}
+function main4(){
+    console.log(reverseArray([1,2,3,4,5]));
+}
+main4();
+
+//string is pallindrome or not
+
+function pallindrone(str , start , end=str.length-1){
+    if ( start>end) return true;
+    if(str[start] != str[end]) return false;
+
+    return pallindrone(str,start+1,end-1);
+}
+function main5(){
+    console.log(pallindrone("naman", 0, "naman".length - 1));
+}
+main5();
