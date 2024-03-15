@@ -182,7 +182,7 @@ function sum(N){
 function main2(){
     console.log(sum(5));
 }
-main2();
+// main2();
 
 //factorial of N Number
 function fact(N){
@@ -195,7 +195,7 @@ function fact(N){
 function main3(){
     console.log(fact(5));
 }
-main3();
+// main3();
 
 
 //Reverse an array
@@ -211,7 +211,7 @@ function reverseArray(arr,start=0,end=arr.length-1){
 function main4(){
     console.log(reverseArray([1,2,3,4,5]));
 }
-main4();
+// main4();
 
 //string is pallindrome or not
 
@@ -224,4 +224,22 @@ function pallindrone(str , start , end=str.length-1){
 function main5(){
     console.log(pallindrone("naman", 0, "naman".length - 1));
 }
-main5();
+// main5();
+
+//fibonacci Number
+
+function fib(N) {
+    if (N <= 1) return N; 
+
+    let last = fib(N - 1);
+    let secondLast = fib(N - 2);
+    let output = last + secondLast;
+
+    return output;
+}
+
+function main6() {
+    console.log(fib(6));
+}
+
+main6();
