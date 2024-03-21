@@ -1,5 +1,4 @@
 
-
 //Printing 1 to N times
 function print(N){
     //base Condition
