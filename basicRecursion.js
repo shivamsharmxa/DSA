@@ -171,3 +171,30 @@ function main10(){
     console.log(removedChar);
 }
 main10();
+
+//Remove Pi
+
+function removePi(str) {
+    // Base case
+    if (str.length <= 1) {
+        return str;
+    }
+
+    
+    var SmallOutput;
+
+    if (str[0] == "p" && str[1] == "i") {
+        SmallOutput = removePi(str.substring(2)); 
+        return "3.14" + SmallOutput; 
+    } else {
+        SmallOutput = removePi(str.substring(1)); 
+        return str[0] + SmallOutput; 
+    }
+}
+
+function main11() {
+    var ReplacePi = removePi("apiapi");
+    console.log(ReplacePi);
+}
+
+main11();
