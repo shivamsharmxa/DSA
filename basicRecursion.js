@@ -151,3 +151,23 @@ function main9() {
 }
 
 main9();
+
+//Remove X
+function removeX(str,target){
+    //base case 
+    if(str.length ===0) return ""
+
+    if(str[0]===target){
+        return removeX(str.substring(1),target)
+    }
+    else{
+        return str[0] + removeX(str.substring(1),target)
+    }
+
+}
+
+function main10(){
+    var removedChar = removeX("xabc", "x")
+    console.log(removedChar);
+}
+main10();
