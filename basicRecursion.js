@@ -99,3 +99,18 @@ function main6() {
 }
 
 main6();
+
+//last index of the array 
+function lastIndex(arr, target, index = arr.length - 1) {
+    if (index < 0) return -1;
+    if (arr[index] == target) return index;
+    return lastIndex(arr, target, index - 1);
+}
+
+function main7() {
+    // Corrected the function call to lastIndex instead of lastIdx
+    var lastIdx = lastIndex([1, 4, 5, 6, 9, 8], 10);
+    console.log(lastIdx);
+}
+
+main7();
