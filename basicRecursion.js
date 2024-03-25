@@ -130,3 +130,24 @@ function main8(){
 }
 
 main8();
+
+//Recursion with String
+function replace(str, a, b) {
+    // Base Case
+    if (str.length === 0) {
+        return str;
+    }
+    var Soutput = replace(str.substring(1), a, b);
+    if (str[0] === a) {
+        return b + Soutput;
+    } else {
+        return str[0] + Soutput;
+    }
+}
+
+function main9() {
+    var Replaced = replace("xyaxya", "a", "z");
+    console.log(Replaced);
+}
+
+main9();
