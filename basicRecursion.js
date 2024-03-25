@@ -109,8 +109,24 @@ function lastIndex(arr, target, index = arr.length - 1) {
 
 function main7() {
     // Corrected the function call to lastIndex instead of lastIdx
-    var lastIdx = lastIndex([1, 4, 5, 6, 9, 8], 10);
+    var lastIdx = lastIndex([1, 4, 5, 6, 9, 8,7,8], 8);
     console.log(lastIdx);
 }
 
 main7();
+
+//first index of the array 
+function firstIndex(arr,target,index=0){
+    //base case
+    if(index<0){
+        return -1;
+    }
+    if(arr[index]==target) return index;
+    return firstIndex(arr,target,index+1);
+}
+function main8(){
+   var  FirstIndex = firstIndex([24,56,24,67,89],24);
+    console.log(FirstIndex);
+}
+
+main8();
