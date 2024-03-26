@@ -198,3 +198,24 @@ function main11() {
 }
 
 main11();
+
+//binary search
+function binary(arr, x, si, ei) {
+    if (si > ei) return -1;
+
+    let mid = Math.floor((si + ei) / 2);
+    if (arr[mid] === x)
+        return mid;
+
+    if (arr[mid] < x)
+        return binary(arr, x, mid + 1, ei); // Update si to mid + 1 to search in the right half
+    else
+        return binary(arr, x, si, mid - 1); // Update ei to mid - 1 to search in the left half
+}
+
+function main12() {
+    var BinarySearch = binary([1, 2, 4, 6, 7, 8], 6, 0, 5); 
+    console.log(BinarySearch);
+}
+
+main12();
