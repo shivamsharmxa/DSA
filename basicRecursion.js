@@ -219,3 +219,64 @@ function main12() {
 }
 
 main12();
+
+
+
+
+
+//Merge Sort 
+function MergeSort(arr) {
+    // Base case: if array has one or zero elements, return the array as it is
+    if (arr.length <= 1) {
+        return arr;
+    }
+
+    // Divide the array into parts
+    const mid = Math.floor(arr.length / 2);
+    const leftHalf = arr.slice(0, mid);
+    const rightHalf = arr.slice(mid);
+
+    // Recursively sort the left and right part
+    const sortedLeft = MergeSort(leftHalf);
+    const sortedRight = MergeSort(rightHalf);
+
+    // Merge the sorted left and right part
+    return merge(sortedLeft, sortedRight);
+}
+
+function merge(left, right) {
+    let result = [];
+    let leftIndex = 0;
+    let rightIndex = 0;
+
+    // Compare elements from left and right arrays and add the smaller one to the result array
+    while (leftIndex < left.length && rightIndex < right.length) {
+        if (left[leftIndex] < right[rightIndex]) {
+            result.push(left[leftIndex]);
+            leftIndex++;
+        } else {
+            result.push(right[rightIndex]);
+            rightIndex++;
+        }
+    }
+
+    // Add any remaining elements from the left and right arrays
+    while (leftIndex < left.length) {
+        result.push(left[leftIndex]);
+        leftIndex++;
+    }
+
+    while (rightIndex < right.length) {
+        result.push(right[rightIndex]);
+        rightIndex++;
+    }
+
+    return result;
+}
+
+function main13() {
+    const SortedArray = MergeSort([12, 4, 5, 34, 1, 9]);
+    console.log(SortedArray);
+}
+
+main13();
