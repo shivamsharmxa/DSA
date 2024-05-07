@@ -415,6 +415,24 @@ function MergeSort(arr) {
     // Merge the sorted left and right part
     return merge(sortedLeft, sortedRight);
 }
+function MergeSort(arr) {
+    // Base case: if array has one or zero elements, return the array as it is
+    if (arr.length <= 1) {
+        return arr;
+    }
+
+    // Divide the array into parts
+    const mid = Math.floor(arr.length / 2);
+    const leftHalf = arr.slice(0, mid);
+    const rightHalf = arr.slice(mid);
+
+    // Recursively sort the left and right part
+    const sortedLeft = MergeSort(leftHalf);
+    const sortedRight = MergeSort(rightHalf);
+
+    // Merge the sorted left and right part
+    return merge(sortedLeft, sortedRight);
+}
 
 
 
