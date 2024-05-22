@@ -72,7 +72,13 @@ function findDivisibleNumbers(arr) {
   console.log('Numbers divisible by 3 and their frequencies:', result.divisibleBy3);
 
 
+
+
   
+  
+
+
+
 
 
 
